@@ -12,12 +12,12 @@ function destructivelyPrependDriver(name) {
 }
 
 function destructivelyRemoveLastDriver() {
-  drivers.shift();
+  drivers.pop();
   return drivers;
 }
 
 function destructivelyRemoveFirstDriver() {
-  drivers.pop();
+  drivers.shift();
   return drivers;
 }
 
@@ -32,7 +32,7 @@ function prependDriver(name) {
 }
 
 function removeLastDriver() {
-  const newDrivers = drivers.slice(0, drivers.length - 2);
+  const newDrivers = drivers.slice(0, -1);
   return newDrivers;
 }
 
